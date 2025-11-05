@@ -1507,16 +1507,14 @@ updateValue();           // update price and taxes
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[void updateValue() {
-    double depreciation = 0.005 * age;
-    double maintenanceEffect = (maintenanceLevel - 0.5) * 0.1;
+					<Body><![CDATA[// depreciation and maintenance impact
+double depreciation = 0.005 * age; // 0.5% loss per year
+double maintenanceEffect = (maintenanceLevel - 0.5) * 0.1;
 
-    // Bigger houses are more valuable
-    double sizeEffect = sizeOfHouse / 100.0; // scales around 1.0 for average-sized homes
+currentPrice = lastPrice * (1 - depreciation + maintenanceEffect);
 
-    currentPrice = lastPrice * (1 - depreciation + maintenanceEffect) * sizeEffect;
-    taxes = currentPrice * 0.01;
-}
+// update taxes proportionally
+taxes = currentPrice * 0.01;
 
 ]]></Body>
 				</Function>
