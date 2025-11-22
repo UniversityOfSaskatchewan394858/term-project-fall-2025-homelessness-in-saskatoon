@@ -5,7 +5,7 @@
                    AlpVersion="8.9.6">
 	<Model>
 		<Id>1762283989744</Id>
-		<Name><![CDATA[Project Construction Part]]></Name>
+		<Name><![CDATA[CMPT394 Housing Project]]></Name>
 		<EngineVersion>6</EngineVersion>
 		<JavaPackageName><![CDATA[project_construction_part]]></JavaPackageName>
 		<ModelTimeUnit>Month</ModelTimeUnit>

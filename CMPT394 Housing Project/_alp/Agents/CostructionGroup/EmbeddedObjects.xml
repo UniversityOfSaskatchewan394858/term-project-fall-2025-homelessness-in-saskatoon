@@ -190,6 +190,9 @@
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[addToCustomPopulation]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[true]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[population]]></Name>
@@ -208,6 +211,9 @@
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[new House(0,size,price,tax)]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onDiscard]]></Name>
@@ -710,6 +716,9 @@
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[this]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onRemove]]></Name>
@@ -964,7 +973,7 @@
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[//marketHouses.add(this.house)]]></Code>
+					<Code><![CDATA[agent.market.add_housesForSale(0, agent.sizeOfHouse, agent.lastPrice, agent.taxes)]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>

@@ -108,6 +108,14 @@
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
+				<EntryAction>for(house:housesForRent){
+	if (house.salePrice&lt;person.Budget &amp;&amp; 
+	preson.requestedSize &lt; house.size &amp;&amp; 
+	person.requestedMaintenanceLevel &gt; 
+	house.lastMaintenance)
+		return buyHouse
+}
+return leaveMarket</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -124,6 +132,14 @@
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
+				<EntryAction>for(house:housesForRent){
+	if (house.rentPrice&lt;person.Budget &amp;&amp; 
+	preson.requestedSize &lt; house.size &amp;&amp; 
+	person.requestedMaintenanceLevel &gt; 
+	house.lastMaintenance)
+		return rentHouse
+}
+return leaveMarket</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -388,6 +404,7 @@
 			<LineArrowPosition>END</LineArrowPosition>
 		</AgentLink>
 	</AgentLinks>
+	<EmbeddedObjects xmlns:al="http://anylogic.com"/>
 	<Presentation>
 		<Level>
 			<Id>1763843436288</Id>
