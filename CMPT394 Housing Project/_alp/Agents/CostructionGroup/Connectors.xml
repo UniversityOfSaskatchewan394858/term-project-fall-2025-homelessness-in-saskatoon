@@ -3,7 +3,7 @@
 	<Connector>
 		<Id>1762286608270</Id>
 		<Name><![CDATA[connector]]></Name>
-		<X>100</X>
+		<X>140</X>
 		<Y>240</Y>
 		<Label>
 			<X>10</X>
@@ -19,7 +19,7 @@
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
-			<ClassName>Source</ClassName>
+			<ClassName>Enter</ClassName>
 			<ItemName>out</ItemName>
 		</SourceConnectableItemReference>
 		<TargetEmbeddedObjectReference>
@@ -38,7 +38,7 @@
 				<Y>0</Y>
 			</Point>
 			<Point>
-				<X>140</X>
+				<X>100</X>
 				<Y>0</Y>
 			</Point>
 		</Points>
@@ -132,7 +132,7 @@
 	<Connector>
 		<Id>1762287179124</Id>
 		<Name><![CDATA[connector3]]></Name>
-		<X>610</X>
+		<X>620</X>
 		<Y>240</Y>
 		<Label>
 			<X>10</X>
@@ -144,11 +144,11 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>project_construction_part</PackageName>
 			<ClassName>CostructionGroup</ClassName>
-			<ItemName>houseEntersMarket</ItemName>
+			<ItemName>market</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
-			<ClassName>Sink</ClassName>
+			<ClassName>Exit</ClassName>
 			<ItemName>in</ItemName>
 		</SourceConnectableItemReference>
 		<TargetEmbeddedObjectReference>
@@ -167,7 +167,7 @@
 				<Y>0</Y>
 			</Point>
 			<Point>
-				<X>-80</X>
+				<X>-90</X>
 				<Y>0</Y>
 			</Point>
 		</Points>
