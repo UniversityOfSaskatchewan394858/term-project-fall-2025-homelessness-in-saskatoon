@@ -161,9 +161,6 @@
 			<Parameter>
 				<Name><![CDATA[InterestRate]]></Name>
 			</Parameter>
-			<Parameter>
-				<Name><![CDATA[houseCosts]]></Name>
-			</Parameter>
 		</Parameters>
 		<ReplicationFlag>true</ReplicationFlag>
 		<Replication Class="CodeValue">

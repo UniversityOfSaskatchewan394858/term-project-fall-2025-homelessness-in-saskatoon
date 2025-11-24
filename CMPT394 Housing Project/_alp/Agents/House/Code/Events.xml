@@ -26,11 +26,11 @@
 			<OccurrenceDate>1762329600000</OccurrenceDate>
 			<OccurrenceTime Class="CodeUnitValue">
 				<Code><![CDATA[0]]></Code>
-				<Unit Class="TimeUnits">SECOND</Unit>
+				<Unit Class="TimeUnits">MONTH</Unit>
 			</OccurrenceTime>
 			<RecurrenceCode Class="CodeUnitValue">
 				<Code><![CDATA[1]]></Code>
-				<Unit Class="TimeUnits">SECOND</Unit>
+				<Unit Class="TimeUnits">MONTH</Unit>
 			</RecurrenceCode>
 			<Condition>false</Condition>
 		</Properties>
