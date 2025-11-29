@@ -166,7 +166,7 @@
 				</Point>
 			</Points>
 			<IconOffset>20.0</IconOffset>
-			<Properties Source="1763841706952" Target="1763841706954" Trigger="condition">
+			<Properties Source="1763841706952" Target="1763841706954" Trigger="message">
 				<Action>vacant = false;
 
 </Action>
@@ -180,10 +180,10 @@
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_SECOND</Unit>
 				</Rate>
-				<MessageType>Object</MessageType>
+				<MessageType>Messages</MessageType>
 				<DefaultTransition>true</DefaultTransition>
-				<FilterType>unconditionally</FilterType>
-				<EqualsExpression>"text"</EqualsExpression>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>houseIsRented</EqualsExpression>
 				<SatisfiesExpression>true</SatisfiesExpression>
 			</Properties>
 		</StatechartElement>
@@ -210,7 +210,7 @@
 				</Point>
 			</Points>
 			<IconOffset>20.0</IconOffset>
-			<Properties Source="1763841706952" Target="1763841706956" Trigger="condition">
+			<Properties Source="1763841706952" Target="1763841706956" Trigger="message">
 				<Action>vacant = false;
 renter = null;
 </Action>
@@ -226,8 +226,8 @@ renter = null;
 				</Rate>
 				<MessageType>Object</MessageType>
 				<DefaultTransition>true</DefaultTransition>
-				<FilterType>unconditionally</FilterType>
-				<EqualsExpression>"text"</EqualsExpression>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>ownerEntersHouse</EqualsExpression>
 				<SatisfiesExpression>true</SatisfiesExpression>
 			</Properties>
 		</StatechartElement>
@@ -254,7 +254,7 @@ renter = null;
 				</Point>
 			</Points>
 			<IconOffset>20.0</IconOffset>
-			<Properties Source="1763841706954" Target="1763841706952" Trigger="condition">
+			<Properties Source="1763841706954" Target="1763841706952" Trigger="message">
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">SECOND</Unit>
@@ -264,10 +264,10 @@ renter = null;
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_SECOND</Unit>
 				</Rate>
-				<MessageType>Object</MessageType>
+				<MessageType>Messages</MessageType>
 				<DefaultTransition>true</DefaultTransition>
-				<FilterType>unconditionally</FilterType>
-				<EqualsExpression>"text"</EqualsExpression>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>tenantLeaves</EqualsExpression>
 				<SatisfiesExpression>true</SatisfiesExpression>
 			</Properties>
 		</StatechartElement>
@@ -294,7 +294,7 @@ renter = null;
 				</Point>
 			</Points>
 			<IconOffset>20.0</IconOffset>
-			<Properties Source="1763841706956" Target="1763841706952" Trigger="condition">
+			<Properties Source="1763841706956" Target="1763841706952" Trigger="message">
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">SECOND</Unit>
@@ -304,10 +304,10 @@ renter = null;
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_SECOND</Unit>
 				</Rate>
-				<MessageType>Object</MessageType>
+				<MessageType>Messages</MessageType>
 				<DefaultTransition>true</DefaultTransition>
-				<FilterType>unconditionally</FilterType>
-				<EqualsExpression>"text"</EqualsExpression>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>ownerNotInHouse</EqualsExpression>
 				<SatisfiesExpression>true</SatisfiesExpression>
 			</Properties>
 		</StatechartElement>

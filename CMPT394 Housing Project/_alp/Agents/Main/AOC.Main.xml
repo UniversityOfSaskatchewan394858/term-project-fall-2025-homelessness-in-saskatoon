@@ -93,6 +93,59 @@
 	</ScaleRuler>
 	<CurrentLevel>1762283989754</CurrentLevel>
 	<ConnectionsId>1762283989749</ConnectionsId>
+	<Functions xmlns:al="http://anylogic.com"/>
+	<CustomDistributions>
+		<CustomDistribution>
+			<Id>1764175685559</Id>
+			<Name><![CDATA[WageDist]]></Name>
+			<X>70</X>
+			<Y>240</Y>
+			<Label>
+				<X>15</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Type><![CDATA[CONTINUOUS]]></Type>
+			<DefinitionType>RANGES</DefinitionType>
+			<IntegerValues>false</IntegerValues>
+			<Static>false</Static>
+			<LoadFromDatabase>false</LoadFromDatabase>
+			<RangesQuery>
+				<Id>1764175685554</Id>
+				<TableReference/>
+				<StartColumnReference/>
+				<EndColumnReference/>
+				<WeightColumnReference/>
+			</RangesQuery>
+			<FrequencyQuery>
+				<Id>1764175685555</Id>
+				<TableReference/>
+				<ValueColumnReference/>
+				<WeightColumnReference/>
+			</FrequencyQuery>
+			<SampleQuery>
+				<Id>1764175685556</Id>
+				<TableReference/>
+				<ValueColumnReference/>
+			</SampleQuery>
+			<OptionQuery>
+				<Id>1764175685557</Id>
+				<TableReference/>
+				<OptionColumnReference/>
+				<WeightColumnReference/>
+			</OptionQuery>
+			<Start>2000.0</Start>
+			<Start>2500.1</Start>
+			<End>2500.0</End>
+			<End>3000.0</End>
+			<RangeValue>0.2</RangeValue>
+			<RangeValue>0.4</RangeValue>
+			<OptionListID>0</OptionListID>
+			<OptionValues/>
+		</CustomDistribution>
+	</CustomDistributions>
 	<AgentLinks>
 		<AgentLink>
 			<Id>1762283989749</Id>

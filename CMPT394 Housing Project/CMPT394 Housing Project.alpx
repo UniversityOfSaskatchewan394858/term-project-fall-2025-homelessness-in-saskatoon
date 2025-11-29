@@ -9,6 +9,56 @@
 		<EngineVersion>6</EngineVersion>
 		<JavaPackageName><![CDATA[project_construction_part]]></JavaPackageName>
 		<ModelTimeUnit>Month</ModelTimeUnit>
+		<OptionLists>
+			<OptionList>
+				<Id>1764173675843</Id>
+				<Name><![CDATA[Messages]]></Name>
+				<Option>
+					<Id>1764173676415</Id>
+					<Name><![CDATA[rentAHouse]]></Name>
+				</Option>
+				<Option>
+					<Id>1764445534822</Id>
+					<Name><![CDATA[tenantLeaves]]></Name>
+				</Option>
+				<Option>
+					<Id>1764445563309</Id>
+					<Name><![CDATA[ownerEntersHouse]]></Name>
+				</Option>
+				<Option>
+					<Id>1764445737184</Id>
+					<Name><![CDATA[loseHouse]]></Name>
+				</Option>
+				<Option>
+					<Id>1764445757294</Id>
+					<Name><![CDATA[boughtHouse]]></Name>
+				</Option>
+				<Option>
+					<Id>1764445770665</Id>
+					<Name><![CDATA[moveToRent]]></Name>
+				</Option>
+				<Option>
+					<Id>1764445805494</Id>
+					<Name><![CDATA[renterBoughtAHouse]]></Name>
+				</Option>
+				<Option>
+					<Id>1764445804058</Id>
+					<Name><![CDATA[kickedOutOfRent]]></Name>
+				</Option>
+				<Option>
+					<Id>1764445918894</Id>
+					<Name><![CDATA[rentHouse]]></Name>
+				</Option>
+				<Option>
+					<Id>1764445987603</Id>
+					<Name><![CDATA[hasHouse]]></Name>
+				</Option>
+				<Option>
+					<Id>1764446011523</Id>
+					<Name><![CDATA[noHouse]]></Name>
+				</Option>
+			</OptionList>
+		</OptionLists>
 		<Folders/>
 		<ActiveObjectClasses/>
 		<DifferentialEquationsMethod>EULER</DifferentialEquationsMethod>
