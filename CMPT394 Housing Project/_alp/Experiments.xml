@@ -43,9 +43,6 @@
 				<ParameterName>numberOfConstructionGroups</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>timeToBuildPerSqft</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>totalBudgetOfGroup</ParameterName>
 			</Parameter>
 			<Parameter>
@@ -107,7 +104,14 @@
 				<Alignment>LEFT</Alignment>
 			</Text>
 		</Presentation>
-		<Parameters/>
+		<Parameters>
+			<Parameter>
+				<ParameterName>numberOfConGrp</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>numberOfPeople</ParameterName>
+			</Parameter>
+		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
 			<ExecutionMode>realTimeScaled</ExecutionMode>

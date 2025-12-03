@@ -98,8 +98,8 @@
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1763841832041</Id>
 			<Name><![CDATA[Employed]]></Name>
-			<X>490</X>
-			<Y>40</Y>
+			<X>510</X>
+			<Y>190</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -108,15 +108,14 @@
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100.6872852233677" Height="59.15194346289753">
-				<EntryAction>income = BaseIncome;</EntryAction>
 				<FillColor>-16711936</FillColor>
 			</Properties>
 		</StatechartElement>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1763841832043</Id>
 			<Name><![CDATA[Unemployed]]></Name>
-			<X>490</X>
-			<Y>180</Y>
+			<X>510</X>
+			<Y>40</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -124,7 +123,7 @@
 			<PublicFlag>false</PublicFlag>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
-			<Properties Width="100.6872852233677" Height="29.575971731448764">
+			<Properties Width="100.6872852233677" Height="60">
 				<EntryAction>income = 0;</EntryAction>
 				<FillColor>-65536</FillColor>
 			</Properties>
@@ -142,7 +141,7 @@
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="99.82935153583618" Height="62.22222222222222">
-				<EntryAction>income = 2000;</EntryAction>
+				<EntryAction>income = 0;</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -197,11 +196,27 @@
 				<FillColor>-16711936</FillColor>
 			</Properties>
 		</StatechartElement>
+		<StatechartElement Class="State" ParentState="ROOT_NODE">
+			<Id>1764175000375</Id>
+			<Name><![CDATA[ExternalSupport]]></Name>
+			<X>950</X>
+			<Y>220</Y>
+			<Label>
+				<X>10</X>
+				<Y>10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties Width="133.333" Height="22.667">
+				<FillColor>-14774017</FillColor>
+			</Properties>
+		</StatechartElement>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1763841832053</Id>
 			<Name><![CDATA[FiredOrQuit]]></Name>
-			<X>519.436</X>
-			<Y>98.435</Y>
+			<X>539.436</X>
+			<Y>189.435</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -212,22 +227,22 @@
 			<Points>
 				<Point>
 					<X>0.7699999999999818</X>
-					<Y>0.7169434628975182</Y>
+					<Y>0.5649999999999977</Y>
 				</Point>
 				<Point>
 					<X>0.7699999999999818</X>
-					<Y>81.565</Y>
+					<Y>-89.435</Y>
 				</Point>
 			</Points>
 			<IconOffset>20.0</IconOffset>
-			<Properties Source="1763841832041" Target="1763841832043" Trigger="condition">
+			<Properties Source="1763841832041" Target="1763841832043" Trigger="rate">
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">SECOND</Unit>
 				</Timeout>
 				<Condition>randomTrue(0.02)</Condition>
 				<Rate Class="CodeUnitValue">
-					<Code><![CDATA[1]]></Code>
+					<Code><![CDATA[0.016]]></Code>
 					<Unit Class="RateUnits">PER_SECOND</Unit>
 				</Rate>
 				<MessageType>Object</MessageType>
@@ -240,8 +255,8 @@
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1763841832055</Id>
 			<Name><![CDATA[FoundNewJobOrRehired]]></Name>
-			<X>559.711</X>
-			<Y>179.445</Y>
+			<X>579.711</X>
+			<Y>99.445</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -256,19 +271,21 @@
 				</Point>
 				<Point>
 					<X>0.7699999999999818</X>
-					<Y>-80.29305653710247</Y>
+					<Y>90.555</Y>
 				</Point>
 			</Points>
 			<IconOffset>20.0</IconOffset>
-			<Properties Source="1763841832043" Target="1763841832041" Trigger="condition">
+			<Properties Source="1763841832043" Target="1763841832041" Trigger="rate">
+				<Action>income = lastIncome * uniform(0.9, 1.1);
+lastIncome = income;</Action>
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">SECOND</Unit>
 				</Timeout>
 				<Condition>randomTrue(0.05)</Condition>
 				<Rate Class="CodeUnitValue">
-					<Code><![CDATA[1]]></Code>
-					<Unit Class="RateUnits">PER_SECOND</Unit>
+					<Code><![CDATA[0.25]]></Code>
+					<Unit Class="RateUnits">PER_MONTH</Unit>
 				</Rate>
 				<MessageType>Object</MessageType>
 				<DefaultTransition>true</DefaultTransition>
@@ -279,9 +296,9 @@
 		</StatechartElement>
 		<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
 			<Id>1763841832057</Id>
-			<Name><![CDATA[emplyomentStatusSc]]></Name>
-			<X>899.727</X>
-			<Y>70.741</Y>
+			<Name><![CDATA[employmentStatusSc]]></Name>
+			<X>900</X>
+			<Y>80</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -291,11 +308,11 @@
 			<ShowLabel>true</ShowLabel>
 			<Points>
 				<Point>
-					<X>0</X>
-					<Y>0</Y>
+					<X>0.27300000000000324</X>
+					<Y>0.25900000000000034</Y>
 				</Point>
 				<Point>
-					<X>-59.89764846416381</X>
+					<X>-60.17064846416383</X>
 					<Y>0</Y>
 				</Point>
 			</Points>
@@ -304,8 +321,8 @@
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1763841832059</Id>
 			<Name><![CDATA[Retirement]]></Name>
-			<X>590</X>
-			<Y>56</Y>
+			<X>610</X>
+			<Y>60</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -316,15 +333,19 @@
 			<Points>
 				<Point>
 					<X>0.6872852233676667</X>
-					<Y>0.05099999999994509</Y>
+					<Y>0</Y>
 				</Point>
 				<Point>
-					<X>150</X>
-					<Y>4</Y>
+					<X>89</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>130</X>
+					<Y>0</Y>
 				</Point>
 			</Points>
 			<IconOffset>20.0</IconOffset>
-			<Properties Source="1763841832041" Target="1763841832045" Trigger="condition">
+			<Properties Source="1763841832043" Target="1763841832045" Trigger="message">
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">SECOND</Unit>
@@ -334,10 +355,10 @@
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_SECOND</Unit>
 				</Rate>
-				<MessageType>Object</MessageType>
+				<MessageType>Messages</MessageType>
 				<DefaultTransition>true</DefaultTransition>
-				<FilterType>unconditionally</FilterType>
-				<EqualsExpression>"text"</EqualsExpression>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>noHouse</EqualsExpression>
 				<SatisfiesExpression>true</SatisfiesExpression>
 			</Properties>
 		</StatechartElement>
@@ -359,12 +380,16 @@
 					<Y>0</Y>
 				</Point>
 				<Point>
-					<X>-149.31271477663233</X>
-					<Y>-3.949000000000055</Y>
+					<X>-41</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>-129.31271477663233</X>
+					<Y>0</Y>
 				</Point>
 			</Points>
 			<IconOffset>20.0</IconOffset>
-			<Properties Source="1763841832045" Target="1763841832041" Trigger="condition">
+			<Properties Source="1763841832045" Target="1763841832043" Trigger="message">
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">SECOND</Unit>
@@ -374,10 +399,10 @@
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_SECOND</Unit>
 				</Rate>
-				<MessageType>Object</MessageType>
+				<MessageType>Messages</MessageType>
 				<DefaultTransition>true</DefaultTransition>
-				<FilterType>unconditionally</FilterType>
-				<EqualsExpression>"text"</EqualsExpression>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>hasHouse</EqualsExpression>
 				<SatisfiesExpression>true</SatisfiesExpression>
 			</Properties>
 		</StatechartElement>
@@ -428,22 +453,21 @@
 				</Point>
 			</Points>
 			<IconOffset>20.0</IconOffset>
-			<Properties Source="1763841832047" Target="1763841832049" Trigger="timeout">
-				<Action>income &gt; min_rent &amp;&amp; savings &gt;= deposit &amp;&amp; housingCost &lt;= 0.35 * income
-</Action>
+			<Properties Source="1763841832047" Target="1763841832049" Trigger="message">
+				<Action>this.employmentStatusSc.receiveMessage(hasHouse)</Action>
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">SECOND</Unit>
 				</Timeout>
-				<Condition>true</Condition>
+				<Condition>houseRent != null;</Condition>
 				<Rate Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_SECOND</Unit>
 				</Rate>
-				<MessageType>Object</MessageType>
+				<MessageType>Messages</MessageType>
 				<DefaultTransition>true</DefaultTransition>
-				<FilterType>unconditionally</FilterType>
-				<EqualsExpression>"text"</EqualsExpression>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>rentHouse</EqualsExpression>
 				<SatisfiesExpression>true</SatisfiesExpression>
 			</Properties>
 		</StatechartElement>
@@ -470,22 +494,21 @@
 				</Point>
 			</Points>
 			<IconOffset>20.0</IconOffset>
-			<Properties Source="1763841832049" Target="1763841832051" Trigger="condition">
-				<Action>if(savings &gt; 15000);</Action>
+			<Properties Source="1763841832049" Target="1763841832051" Trigger="message">
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">SECOND</Unit>
 				</Timeout>
-				<Condition>savings &gt;= down_payment &amp;&amp; housingCost &lt;= 0.35 * income
+				<Condition>!housesOwned.isEmpty()
 </Condition>
 				<Rate Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_SECOND</Unit>
 				</Rate>
-				<MessageType>Object</MessageType>
+				<MessageType>Messages</MessageType>
 				<DefaultTransition>true</DefaultTransition>
-				<FilterType>unconditionally</FilterType>
-				<EqualsExpression>"text"</EqualsExpression>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>renterBoughtAHouse</EqualsExpression>
 				<SatisfiesExpression>true</SatisfiesExpression>
 			</Properties>
 		</StatechartElement>
@@ -512,22 +535,22 @@
 				</Point>
 			</Points>
 			<IconOffset>20.0</IconOffset>
-			<Properties Source="1763841832049" Target="1763841832047" Trigger="condition">
-				<Action>if(savings &lt;0);</Action>
+			<Properties Source="1763841832049" Target="1763841832047" Trigger="message">
+				<Action>this.emplyomentStatusSc.receiveMessage(noHouse)</Action>
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">SECOND</Unit>
 				</Timeout>
-				<Condition>income &lt; rent_threshold
+				<Condition>houseRent == null;
 </Condition>
 				<Rate Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_SECOND</Unit>
 				</Rate>
-				<MessageType>Object</MessageType>
+				<MessageType>Messages</MessageType>
 				<DefaultTransition>true</DefaultTransition>
-				<FilterType>unconditionally</FilterType>
-				<EqualsExpression>"text"</EqualsExpression>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>kickedOutOfRent</EqualsExpression>
 				<SatisfiesExpression>true</SatisfiesExpression>
 			</Properties>
 		</StatechartElement>
@@ -554,23 +577,325 @@
 				</Point>
 			</Points>
 			<IconOffset>20.0</IconOffset>
-			<Properties Source="1763841832051" Target="1763841832049" Trigger="condition">
-				<Action>if(savings &lt; 0 || income &lt; 0);</Action>
+			<Properties Source="1763841832051" Target="1763841832049" Trigger="message">
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[savings < 0
 ]]></Code>
 					<Unit Class="TimeUnits">SECOND</Unit>
 				</Timeout>
-				<Condition>savings &lt; 0
-</Condition>
+				<Condition>housesOwned.isEmpty() &amp;&amp; houseRent != null</Condition>
 				<Rate Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_SECOND</Unit>
 				</Rate>
-				<MessageType>Object</MessageType>
+				<MessageType>Messages</MessageType>
 				<DefaultTransition>true</DefaultTransition>
-				<FilterType>unconditionally</FilterType>
-				<EqualsExpression>"text"</EqualsExpression>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>moveToRent</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1764021128989</Id>
+			<Name><![CDATA[Repositioned]]></Name>
+			<X>1189</X>
+			<Y>267</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0.18100000000004002</X>
+					<Y>0.77800000000002</Y>
+				</Point>
+				<Point>
+					<X>-77</X>
+					<Y>-44</Y>
+				</Point>
+				<Point>
+					<X>11</X>
+					<Y>-113.2958888888889</Y>
+				</Point>
+			</Points>
+			<IconOffset>20.0</IconOffset>
+			<Properties Source="1763841832051" Target="1763841832047" Trigger="message">
+				<Action>this.emplyomentStatusSc.receiveMessage(noHouse)</Action>
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MONTH</Unit>
+				</Timeout>
+				<Condition>housesOwned.isEmpty() &amp;&amp; houseRent == null;</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MONTH</Unit>
+				</Rate>
+				<MessageType>Messages</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>loseHouse</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1764021306516</Id>
+			<Name><![CDATA[boughtAHouse]]></Name>
+			<X>1279</X>
+			<Y>143</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0.010351535836207404</X>
+					<Y>0.7041111111111036</Y>
+				</Point>
+				<Point>
+					<X>101</X>
+					<Y>67</Y>
+				</Point>
+				<Point>
+					<X>-9.989648464163793</X>
+					<Y>124.77800000000002</Y>
+				</Point>
+			</Points>
+			<IconOffset>20.0</IconOffset>
+			<Properties Source="1763841832047" Target="1763841832051" Trigger="message">
+				<Action>this.employmentStatusSc.receiveMessage(hasHouse)</Action>
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MONTH</Unit>
+				</Timeout>
+				<Condition>!housesOwned.isEmpty();</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MONTH</Unit>
+				</Rate>
+				<MessageType>Messages</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>boughtHouse</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1764446025174</Id>
+			<Name><![CDATA[Retirement1]]></Name>
+			<X>610</X>
+			<Y>200</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0.6872852233676667</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>57</X>
+					<Y>-43</Y>
+				</Point>
+				<Point>
+					<X>130</X>
+					<Y>-100</Y>
+				</Point>
+			</Points>
+			<IconOffset>20.0</IconOffset>
+			<Properties Source="1763841832041" Target="1763841832045" Trigger="message">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">SECOND</Unit>
+				</Timeout>
+				<Condition>randomTrue(0.01)</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_SECOND</Unit>
+				</Rate>
+				<MessageType>Messages</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>noHouse</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1764798528572</Id>
+			<Name><![CDATA[CrashCouch]]></Name>
+			<X>1179</X>
+			<Y>136</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0.18100000000004002</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>-99</X>
+					<Y>44</Y>
+				</Point>
+				<Point>
+					<X>-159</X>
+					<Y>84</Y>
+				</Point>
+			</Points>
+			<IconOffset>20.0</IconOffset>
+			<Properties Source="1763841832047" Target="1764175000375" Trigger="rate">
+				<Action>this.employmentStatusSc.receiveMessage(hasHouse)</Action>
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MONTH</Unit>
+				</Timeout>
+				<Condition>housesOwned.isEmpty() &amp;&amp; houseRent == null;</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[0.5]]></Code>
+					<Unit Class="RateUnits">PER_MONTH</Unit>
+				</Rate>
+				<MessageType>Messages</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>loseHouse</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1764798963896</Id>
+			<Name><![CDATA[renting1]]></Name>
+			<X>1083</X>
+			<Y>230</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0.3330000000000837</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>106.18100000000004</X>
+					<Y>-3.7038888888888835</Y>
+				</Point>
+			</Points>
+			<IconOffset>20.0</IconOffset>
+			<Properties Source="1764175000375" Target="1763841832049" Trigger="message">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">SECOND</Unit>
+				</Timeout>
+				<Condition>houseRent != null;</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_SECOND</Unit>
+				</Rate>
+				<MessageType>Messages</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>rentHouse</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1764798980290</Id>
+			<Name><![CDATA[boughtAHouse1]]></Name>
+			<X>1029.9896484641638</X>
+			<Y>242.2958888888889</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0.010351535836207404</X>
+					<Y>0.3711111111111052</Y>
+				</Point>
+				<Point>
+					<X>27</X>
+					<Y>54</Y>
+				</Point>
+				<Point>
+					<X>149.19135153583625</X>
+					<Y>46.59322222222221</Y>
+				</Point>
+			</Points>
+			<IconOffset>20.0</IconOffset>
+			<Properties Source="1764175000375" Target="1763841832051" Trigger="message">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MONTH</Unit>
+				</Timeout>
+				<Condition>!housesOwned.isEmpty();</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MONTH</Unit>
+				</Rate>
+				<MessageType>Messages</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>boughtHouse</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1764799125144</Id>
+			<Name><![CDATA[KickCouch]]></Name>
+			<X>1060</X>
+			<Y>220</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>129.18100000000004</X>
+					<Y>-66.2958888888889</Y>
+				</Point>
+			</Points>
+			<IconOffset>20.0</IconOffset>
+			<Properties Source="1764175000375" Target="1763841832047" Trigger="timeout">
+				<Action>this.employmentStatusSc.receiveMessage(noHouse)</Action>
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[2]]></Code>
+					<Unit Class="TimeUnits">MONTH</Unit>
+				</Timeout>
+				<Condition>housesOwned.isEmpty() &amp;&amp; houseRent == null;</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[0.5]]></Code>
+					<Unit Class="RateUnits">PER_MONTH</Unit>
+				</Rate>
+				<MessageType>Messages</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>loseHouse</EqualsExpression>
 				<SatisfiesExpression>true</SatisfiesExpression>
 			</Properties>
 		</StatechartElement>
@@ -597,7 +922,7 @@
 			<StatechartReference>
 				<PackageName>project_construction_part</PackageName>
 				<ClassName>Person</ClassName>
-				<ItemName>emplyomentStatusSc</ItemName>
+				<ItemName>employmentStatusSc</ItemName>
 			</StatechartReference>
 			<StatechartReference>
 				<PackageName>project_construction_part</PackageName>
@@ -631,6 +956,7 @@
 			</ActiveObjectClass>
 		</ContainerLink>
 	</ContainerLinks>
+	<EmbeddedObjects xmlns:al="http://anylogic.com"/>
 	<Presentation>
 		<Level>
 			<Id>1762285197687</Id>
@@ -647,6 +973,7 @@
 			<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 			<Z>0</Z>
 			<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
+			<Presentation xmlns:al="http://anylogic.com"/>
 		</Level>
 	</Presentation>
 </ActiveObjectClass>

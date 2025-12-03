@@ -96,9 +96,6 @@
 							<Parameter>
 								<Name><![CDATA[InterestRate]]></Name>
 							</Parameter>
-							<Parameter>
-								<Name><![CDATA[houseCosts]]></Name>
-							</Parameter>
 						</Parameters>
 						<ReplicationFlag>true</ReplicationFlag>
 						<Replication Class="CodeValue">
@@ -547,7 +544,7 @@
 			<Parameter>
 				<Name><![CDATA[delayTime]]></Name>
 				<Value Class="CodeUnitValue">
-					<Code><![CDATA[triangular( agent.sizeOfHouse*timeToBuildPerSqft/2, agent.sizeOfHouse*timeToBuildPerSqft, agent.sizeOfHouse*timeToBuildPerSqft*1.5 )]]></Code>
+					<Code><![CDATA[triangular( 4+(0.0025*agent.sizeOfHouse/2), 4+(0.0025*agent.sizeOfHouse), 4+(0.0025*agent.sizeOfHouse*1.5))]]></Code>
 					<Unit Class="TimeUnits">MONTH</Unit>
 				</Value>
 			</Parameter>

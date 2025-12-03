@@ -87,9 +87,9 @@
 		<Parameters>
 			<Parameter>
 				<Name><![CDATA[numberOfConstructionGroups]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[timeToBuildPerSqft]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[numberOfConGrp]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[totalBudgetOfGroup]]></Name>
@@ -124,7 +124,7 @@
 	</EmbeddedObject>
 	<EmbeddedObject>
 		<Id>1763930083765</Id>
-		<Name><![CDATA[person]]></Name>
+		<Name><![CDATA[personPopulation]]></Name>
 		<X>70</X>
 		<Y>170</Y>
 		<Label>
@@ -148,26 +148,20 @@
 		<Parameters>
 			<Parameter>
 				<Name><![CDATA[BaseIncome]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[WageDist()]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
-				<Name><![CDATA[spendRate]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[rentCost]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[morgageCost]]></Name>
+				<Name><![CDATA[otherExpenditure]]></Name>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[InterestRate]]></Name>
 			</Parameter>
-			<Parameter>
-				<Name><![CDATA[houseCosts]]></Name>
-			</Parameter>
 		</Parameters>
 		<ReplicationFlag>true</ReplicationFlag>
 		<Replication Class="CodeValue">
-			<Code><![CDATA[5000]]></Code>
+			<Code><![CDATA[numberOfPeople]]></Code>
 		</Replication>
 		<CollectionType>ARRAY_LIST_BASED</CollectionType>
 		<InEnvironment>true</InEnvironment>

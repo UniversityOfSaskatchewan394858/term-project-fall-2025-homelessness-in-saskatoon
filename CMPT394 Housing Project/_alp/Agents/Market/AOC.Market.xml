@@ -132,9 +132,9 @@ return leaveMarket</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>for(house:housesForRent){
-	if (house.rentPrice&lt;person.Budget &amp;&amp; 
-	preson.requestedSize &lt; house.size &amp;&amp; 
+				<EntryAction>for(House house : housesForRent){
+	if (house.rentPrice&lt;person.budget &amp;&amp; 
+	preson.requestedSize &lt; house. &amp;&amp; 
 	person.requestedMaintenanceLevel &gt; 
 	house.lastMaintenance)
 		return rentHouse
@@ -172,6 +172,8 @@ return leaveMarket</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
+				<EntryAction>//agent.houseRent = this house;
+//this.house.renter = agent;</EntryAction>
 				<FillColor>-4144960</FillColor>
 			</Properties>
 		</StatechartElement>
