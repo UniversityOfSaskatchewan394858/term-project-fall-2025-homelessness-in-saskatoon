@@ -11,18 +11,18 @@ for (Person p : personPopulation){
 	if (p.houseRent != null){
 		housesRented += 1;
 	}
-	if(p.housingSC == housingSC_state.Homeless){
+	if(p.housingSC.isStateActive(housingSC_state.Homeless)){
 		homeless += 1;
 	}
-	else if(p.housingSC == housingSC_state.Renting){
+	else if(p.housingSC.isStateActive(housingSC_state.Renting)){
 		renting += 1;
 	}
 	
-	else if(p.housingSC == housingSC_state.Owning){
+	else if(p.housingSC.isStateActive(housingSC_state.Owning)){
 		owned += 1;
 	}
 	
-	else if(p.housingSC == housingSC_state.ExternalSupport){
+	else if(p.housingSC.isStateActive(housingSC_state.ExternalSupport)){
 		externalServices += 1;
 	}
 }

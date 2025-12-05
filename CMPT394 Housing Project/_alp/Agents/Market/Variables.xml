@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Variables>
 	<Variable Class="PlainVariable">
-		<Id>1763843455239</Id>
-		<Name><![CDATA[saleListings]]></Name>
-		<X>60</X>
-		<Y>220</Y>
+		<Id>1764964959742</Id>
+		<Name><![CDATA[topBidders]]></Name>
+		<X>80</X>
+		<Y>370</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -16,168 +16,17 @@
               Constant="false"
               AccessType="public"
               StaticVariable="false">
-			<Type><![CDATA[double]]></Type>
-		</Properties>
-	</Variable>
-	<Variable Class="PlainVariable">
-		<Id>1763843455241</Id>
-		<Name><![CDATA[rentListings]]></Name>
-		<X>60</X>
-		<Y>250</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true"
-              Constant="false"
-              AccessType="public"
-              StaticVariable="false">
-			<Type><![CDATA[double]]></Type>
-		</Properties>
-	</Variable>
-	<Variable Class="PlainVariable">
-		<Id>1763843455243</Id>
-		<Name><![CDATA[activeAuctions]]></Name>
-		<X>60</X>
-		<Y>280</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true"
-              Constant="false"
-              AccessType="public"
-              StaticVariable="false">
-			<Type><![CDATA[double]]></Type>
-		</Properties>
-	</Variable>
-	<Variable Class="PlainVariable">
-		<Id>1763843455245</Id>
-		<Name><![CDATA[rentalQueue]]></Name>
-		<X>60</X>
-		<Y>310</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true"
-              Constant="false"
-              AccessType="public"
-              StaticVariable="false">
-			<Type><![CDATA[double]]></Type>
-		</Properties>
-	</Variable>
-	<Variable Class="PlainVariable">
-		<Id>1763843455247</Id>
-		<Name><![CDATA[bidQueue]]></Name>
-		<X>60</X>
-		<Y>340</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true"
-              Constant="false"
-              AccessType="public"
-              StaticVariable="false">
-			<Type><![CDATA[double]]></Type>
+			<Type><![CDATA[ArrayList<Person>]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new ArrayList();]]></Code>
+			</InitialValue>
 		</Properties>
 	</Variable>
 	<Variable Class="Parameter">
-		<Id>1763843455251</Id>
-		<Name><![CDATA[auctionTimeout]]></Name>
-		<X>60</X>
-		<Y>160</Y>
-		<Label>
-			<X>10</X>
-			<Y>-5</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-			<Type><![CDATA[double]]></Type>
-			<UnitType>NONE</UnitType>
-			<SdArray>false</SdArray>
-			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.25]]></Code>
-			</DefaultValue>
-			<ParameterEditor>
-				<Id>1763843455249</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
-		</Properties>
-	</Variable>
-	<Variable Class="Parameter">
-		<Id>1763843455255</Id>
-		<Name><![CDATA[minBidIncrement]]></Name>
-		<X>60</X>
-		<Y>190</Y>
-		<Label>
-			<X>10</X>
-			<Y>-5</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-			<Type><![CDATA[double]]></Type>
-			<UnitType>NONE</UnitType>
-			<SdArray>false</SdArray>
-			<ParameterEditor>
-				<Id>1763843455253</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
-		</Properties>
-	</Variable>
-	<Variable Class="Parameter">
-		<Id>1763843455259</Id>
-		<Name><![CDATA[rentQualificationThreshold]]></Name>
-		<X>60</X>
-		<Y>130</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-			<Type><![CDATA[double]]></Type>
-			<UnitType>NONE</UnitType>
-			<SdArray>false</SdArray>
-			<ParameterEditor>
-				<Id>1763843455257</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
-		</Properties>
-	</Variable>
-	<Variable Class="Parameter">
-		<Id>1763930692789</Id>
-		<Name><![CDATA[salePricePerMaintenanceSize]]></Name>
-		<X>60</X>
-		<Y>100</Y>
+		<Id>1764963226529</Id>
+		<Name><![CDATA[auctionDeadline]]></Name>
+		<X>80</X>
+		<Y>330</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -190,15 +39,51 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[/*$/(sqft*(maintenanceLevel+1))]]></Code>
+				<Code><![CDATA[0.5]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
-				<Id>1763930692787</Id>
+				<Id>1764963226527</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
 				<MinSliderValue>0</MinSliderValue>
 				<MaxSliderValue>100</MaxSliderValue>
 				<DelimeterType>NO_DELIMETER</DelimeterType>
 			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="CollectionVariable">
+		<Id>1764970575468</Id>
+		<Name><![CDATA[housesForSale]]></Name>
+		<X>40</X>
+		<Y>500</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+			<CollectionClass>ArrayList</CollectionClass>
+			<ElementClass>House</ElementClass>
+			<ValueElementClass>String</ValueElementClass>
+		</Properties>
+	</Variable>
+	<Variable Class="CollectionVariable">
+		<Id>1764970652707</Id>
+		<Name><![CDATA[housesForRent]]></Name>
+		<X>200</X>
+		<Y>500</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+			<CollectionClass>ArrayList</CollectionClass>
+			<ElementClass>House</ElementClass>
+			<ValueElementClass>String</ValueElementClass>
 		</Properties>
 	</Variable>
 </Variables>

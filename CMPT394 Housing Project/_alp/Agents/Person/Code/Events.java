@@ -7,8 +7,9 @@ updateSavings();
 
 void homelessRiskCheck()
 {/*ALCODESTART::1764019037969*/
-if (homelessnessrisk > 0.2){
-	this.housingSC.receiveMessage()
+if (homelessnessRisk > 0.2){
+	this.housingSC.receiveMessage(loseHouse);
+	this.housingSC.receiveMessage(kickedOutOfRent);
 }
 /*ALCODEEND*/}
 

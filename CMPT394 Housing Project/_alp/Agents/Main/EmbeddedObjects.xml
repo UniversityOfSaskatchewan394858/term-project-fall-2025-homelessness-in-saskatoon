@@ -25,16 +25,7 @@
 		</GenericParameterSubstitute>
 		<Parameters>
 			<Parameter>
-				<Name><![CDATA[auctionTimeout]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[minBidIncrement]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[rentQualificationThreshold]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[salePricePerMaintenanceSize]]></Name>
+				<Name><![CDATA[auctionDeadline]]></Name>
 			</Parameter>
 		</Parameters>
 		<ReplicationFlag>false</ReplicationFlag>

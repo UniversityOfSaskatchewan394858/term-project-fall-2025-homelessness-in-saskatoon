@@ -57,6 +57,14 @@
 					<Id>1764446011523</Id>
 					<Name><![CDATA[noHouse]]></Name>
 				</Option>
+				<Option>
+					<Id>1764966516296</Id>
+					<Name><![CDATA[houseIsRented]]></Name>
+				</Option>
+				<Option>
+					<Id>1764968692000</Id>
+					<Name><![CDATA[ownerLeavesHouse]]></Name>
+				</Option>
 			</OptionList>
 		</OptionLists>
 		<Folders/>

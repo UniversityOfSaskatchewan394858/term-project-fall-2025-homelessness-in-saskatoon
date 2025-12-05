@@ -158,7 +158,6 @@
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="99.82935153583618" Height="31.11111111111111">
-				<EntryAction>housingCost = 0;</EntryAction>
 				<FillColor>-65536</FillColor>
 			</Properties>
 		</StatechartElement>
@@ -175,7 +174,6 @@
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="99.82935153583618" Height="31.11111111111111">
-				<EntryAction>houseCosts=rentCost </EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -192,7 +190,6 @@
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="99.82935153583618" Height="31.11111111111111">
-				<EntryAction>housingCost =morgageCost;</EntryAction>
 				<FillColor>-16711936</FillColor>
 			</Properties>
 		</StatechartElement>
@@ -536,7 +533,7 @@ lastIncome = income;</Action>
 			</Points>
 			<IconOffset>20.0</IconOffset>
 			<Properties Source="1763841832049" Target="1763841832047" Trigger="message">
-				<Action>this.emplyomentStatusSc.receiveMessage(noHouse)</Action>
+				<Action>this.employmentStatusSc.receiveMessage(noHouse)</Action>
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">SECOND</Unit>
@@ -623,7 +620,7 @@ lastIncome = income;</Action>
 			</Points>
 			<IconOffset>20.0</IconOffset>
 			<Properties Source="1763841832051" Target="1763841832047" Trigger="message">
-				<Action>this.emplyomentStatusSc.receiveMessage(noHouse)</Action>
+				<Action>this.employmentStatusSc.receiveMessage(noHouse)</Action>
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">MONTH</Unit>
@@ -956,7 +953,6 @@ lastIncome = income;</Action>
 			</ActiveObjectClass>
 		</ContainerLink>
 	</ContainerLinks>
-	<EmbeddedObjects xmlns:al="http://anylogic.com"/>
 	<Presentation>
 		<Level>
 			<Id>1762285197687</Id>

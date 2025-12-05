@@ -1,122 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EmbeddedObjects>
 	<EmbeddedObject>
-		<Id>1763846374201</Id>
-		<Name><![CDATA[housesForSale]]></Name>
-		<X>120</X>
-		<Y>440</Y>
-		<Label>
-			<X>-25</X>
-			<Y>-30</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<ActiveObjectClass>
-			<PackageName>project_construction_part</PackageName>
-			<ClassName>House</ClassName>
-		</ActiveObjectClass>
-		<GenericParameterSubstitute>
-			<GenericParameterSubstituteReference>
-				<PackageName>project_construction_part</PackageName>
-				<ClassName>House</ClassName>
-				<ItemName>1762284721208</ItemName>
-			</GenericParameterSubstituteReference>
-		</GenericParameterSubstitute>
-		<Parameters>
-			<Parameter>
-				<Name><![CDATA[taxes]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[pricePerSquarefoot]]></Name>
-			</Parameter>
-		</Parameters>
-		<ReplicationFlag>true</ReplicationFlag>
-		<Replication Class="CodeValue">
-			<Code><![CDATA[100]]></Code>
-		</Replication>
-		<CollectionType>ARRAY_LIST_BASED</CollectionType>
-		<InEnvironment>true</InEnvironment>
-		<InitialLocationType>XYZ</InitialLocationType>
-		<ColumnCode Class="CodeValue">
-			<Code><![CDATA[0]]></Code>
-		</ColumnCode>
-		<RowCode Class="CodeValue">
-			<Code><![CDATA[0]]></Code>
-		</RowCode>
-		<LocationNameCode Class="CodeValue">
-			<Code><![CDATA[""]]></Code>
-		</LocationNameCode>
-		<InitializationType>SPECIFIED_NUMBER</InitializationType>
-		<InitializationDatabaseTableQuery>
-			<Id>1763846374199</Id>
-			<TableReference/>
-		</InitializationDatabaseTableQuery>
-		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-		<QuantityColumn/>
-	</EmbeddedObject>
-	<EmbeddedObject>
-		<Id>1763846446597</Id>
-		<Name><![CDATA[housesForRent]]></Name>
-		<X>280</X>
-		<Y>440</Y>
-		<Label>
-			<X>-25</X>
-			<Y>-30</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<ActiveObjectClass>
-			<PackageName>project_construction_part</PackageName>
-			<ClassName>House</ClassName>
-		</ActiveObjectClass>
-		<GenericParameterSubstitute>
-			<GenericParameterSubstituteReference>
-				<PackageName>project_construction_part</PackageName>
-				<ClassName>House</ClassName>
-				<ItemName>1762284721208</ItemName>
-			</GenericParameterSubstituteReference>
-		</GenericParameterSubstitute>
-		<Parameters>
-			<Parameter>
-				<Name><![CDATA[taxes]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[pricePerSquarefoot]]></Name>
-			</Parameter>
-		</Parameters>
-		<ReplicationFlag>true</ReplicationFlag>
-		<Replication Class="CodeValue">
-			<Code><![CDATA[100]]></Code>
-		</Replication>
-		<CollectionType>ARRAY_LIST_BASED</CollectionType>
-		<InEnvironment>true</InEnvironment>
-		<InitialLocationType>XYZ</InitialLocationType>
-		<ColumnCode Class="CodeValue">
-			<Code><![CDATA[0]]></Code>
-		</ColumnCode>
-		<RowCode Class="CodeValue">
-			<Code><![CDATA[0]]></Code>
-		</RowCode>
-		<LocationNameCode Class="CodeValue">
-			<Code><![CDATA[""]]></Code>
-		</LocationNameCode>
-		<InitializationType>SPECIFIED_NUMBER</InitializationType>
-		<InitializationDatabaseTableQuery>
-			<Id>1763846446595</Id>
-			<TableReference/>
-		</InitializationDatabaseTableQuery>
-		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-		<QuantityColumn/>
-	</EmbeddedObject>
-	<EmbeddedObject>
 		<Id>1764017354278</Id>
 		<Name><![CDATA[enterMarket]]></Name>
-		<X>60</X>
-		<Y>560</Y>
+		<X>80</X>
+		<Y>240</Y>
 		<Label>
-			<X>-10</X>
+			<X>-45</X>
 			<Y>-20</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
@@ -132,6 +22,9 @@
 				<ClassName>Enter</ClassName>
 				<ItemName>1412336242933</ItemName>
 			</GenericParameterSubstituteReference>
+			<GenericParameterSubstituteValue Class="CodeValue">
+				<Code><![CDATA[Person]]></Code>
+			</GenericParameterSubstituteValue>
 		</GenericParameterSubstitute>
 		<Parameters>
 			<Parameter>
@@ -229,9 +122,9 @@
 	</EmbeddedObject>
 	<EmbeddedObject>
 		<Id>1764017445196</Id>
-		<Name><![CDATA[buyOrSell]]></Name>
-		<X>180</X>
-		<Y>560</Y>
+		<Name><![CDATA[buyOrRent]]></Name>
+		<X>160</X>
+		<Y>240</Y>
 		<Label>
 			<X>-35</X>
 			<Y>-25</Y>
@@ -259,6 +152,9 @@
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[condition]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.marketStatus != "buying";]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[probability]]></Name>
@@ -297,6 +193,1103 @@
 		<InitializationType>SPECIFIED_NUMBER</InitializationType>
 		<InitializationDatabaseTableQuery>
 			<Id>1764017445194</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1764961940761</Id>
+		<Name><![CDATA[qualifies]]></Name>
+		<X>310</X>
+		<Y>190</Y>
+		<Label>
+			<X>-35</X>
+			<Y>-25</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>SelectOutput</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>SelectOutput</ClassName>
+				<ItemName>1412336242931</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[conditionIsProbabilistic]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[false]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[condition]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.houseRent != null;]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[probability]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onAtEnter]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[choiceIsVolatile]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onEnter]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitTrue]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitFalse]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1764961940759</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1764962022708</Id>
+		<Name><![CDATA[notQualified]]></Name>
+		<X>370</X>
+		<Y>120</Y>
+		<Label>
+			<X>-10</X>
+			<Y>-20</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>Exit</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>Exit</ClassName>
+				<ItemName>1412336242934</ItemName>
+			</GenericParameterSubstituteReference>
+			<GenericParameterSubstituteValue Class="CodeValue">
+				<Code><![CDATA[Person]]></Code>
+			</GenericParameterSubstituteValue>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[onExit]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1764962022706</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1764962797101</Id>
+		<Name><![CDATA[signLease]]></Name>
+		<X>400</X>
+		<Y>180</Y>
+		<Label>
+			<X>-5</X>
+			<Y>-15</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>Delay</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>Delay</ClassName>
+				<ItemName>1412336242930</ItemName>
+			</GenericParameterSubstituteReference>
+			<GenericParameterSubstituteValue Class="CodeValue">
+				<Code><![CDATA[Person]]></Code>
+			</GenericParameterSubstituteValue>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[type]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[delayTime]]></Name>
+				<Value Class="CodeUnitValue">
+					<Code><![CDATA[triangular( 0.5, 1, 1.5 )]]></Code>
+					<Unit Class="TimeUnits">DAY</Unit>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[capacity]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[maximumCapacity]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[entityLocation]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[pushProtocol]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[forceStatisticsCollection]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onEnter]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onAtExit]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExit]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onRemove]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1764962797099</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1764962894140</Id>
+		<Name><![CDATA[seizeARent]]></Name>
+		<X>220</X>
+		<Y>180</Y>
+		<Label>
+			<X>-5</X>
+			<Y>-15</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>Seize</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>Seize</ClassName>
+				<ItemName>1412336243147</ItemName>
+			</GenericParameterSubstituteReference>
+			<GenericParameterSubstituteValue Class="CodeValue">
+				<Code><![CDATA[Person]]></Code>
+			</GenericParameterSubstituteValue>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[seizeFromOnePool]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[resourceSets]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[resourcePool]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[resourceQuantity]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[seizePolicy]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[capacity]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[maximumCapacity]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[sendResources]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationType]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationNode]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationAttractor]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationResource]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationX]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationY]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[destinationZ]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[attachResources]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[entityLocationQueue]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[priority]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[taskMayPreemptOtherTasks]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[taskPreemptionPolicy]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[terminatedTaskProcessing]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[terminatedTasksEnter]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[suspendResumeEntities]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[customizeResourceChoice]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[resourceChoiceCondition]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[resourceSelectionMode]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[resourceRating]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[resourceComparison]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[taskStartBlocksAreConnected]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[taskStartBlocks]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[enableTimeout]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[timeout]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[enablePreemption]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[canceledUnitsBehavior]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[canceledUnitsRelease]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[pushProtocol]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[forceStatisticsCollection]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onEnter]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitTimeout]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitPreempted]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onSeizeUnit]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onPrepareUnit]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[for (House rent : housesForRent){
+	if (agent.budget >= rent.rentPrice){
+		get_Main().market.housesForRent.remove(rent);
+		agent.houseRent = rent;
+		agent.housingSC.receiveMessage(rentHouse);
+	}
+}]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onRemove]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onTaskTerminated]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[comparison]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onTaskSuspended]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onTaskResumed]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onUnitFinishedWrapUp]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1764962894138</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1764963007606</Id>
+		<Name><![CDATA[rentedHouse]]></Name>
+		<X>500</X>
+		<Y>190</Y>
+		<Label>
+			<X>-10</X>
+			<Y>-20</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>Exit</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>Exit</ClassName>
+				<ItemName>1412336242934</ItemName>
+			</GenericParameterSubstituteReference>
+			<GenericParameterSubstituteValue Class="CodeValue">
+				<Code><![CDATA[Person]]></Code>
+			</GenericParameterSubstituteValue>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[onExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.housingSC.receiveMessage(rentHouse);
+agent.houseRent.HouseStatusSc.receiveMessage(houseIsRented);]]></Code>
+				</Value>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1764963007604</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1764963539070</Id>
+		<Name><![CDATA[bidOnHouse]]></Name>
+		<X>230</X>
+		<Y>280</Y>
+		<Label>
+			<X>-5</X>
+			<Y>-15</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>Queue</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>Queue</ClassName>
+				<ItemName>1412336242932</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[capacity]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[maximumCapacity]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[entityLocation]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[queuing]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[priority]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[comparison]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[enableTimeout]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[timeout]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[enablePreemption]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[forceStatisticsCollection]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onEnter]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[for(House h : housesForSale){
+	if (agent.budget >= h.salePrice && 
+	agent.requestedSize <= h.sizeOfHouse && 
+	agent.requestedMaintenanceLevel 
+	>= h.maintenanceLevel){
+		h.salePrice = agent.budget;
+		h.auctionRunning = true;
+		h.auctionEndtime = time() + auctionDeadline;
+		h.owner = agent;
+		agent.houseBid = h;
+	}
+}]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onAtExit]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExit]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitTimeout]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitPreempted]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onRemove]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1764963539068</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1764964538096</Id>
+		<Name><![CDATA[winningBid]]></Name>
+		<X>370</X>
+		<Y>290</Y>
+		<Label>
+			<X>-35</X>
+			<Y>-25</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>SelectOutput</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>SelectOutput</ClassName>
+				<ItemName>1412336242931</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[conditionIsProbabilistic]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[false]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[condition]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[topBidders.contains(agent)]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[probability]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onAtEnter]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[choiceIsVolatile]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onEnter]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[topBidders.clear();
+for (House h : housesForSale){
+	if (h.owner != null){
+		topBidders.add(h.owner);
+	}
+}]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitTrue]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitFalse]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1764964538094</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1764965177765</Id>
+		<Name><![CDATA[noBid]]></Name>
+		<X>390</X>
+		<Y>360</Y>
+		<Label>
+			<X>10</X>
+			<Y>-20</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>Exit</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>Exit</ClassName>
+				<ItemName>1412336242934</ItemName>
+			</GenericParameterSubstituteReference>
+			<GenericParameterSubstituteValue Class="CodeValue">
+				<Code><![CDATA[Person]]></Code>
+			</GenericParameterSubstituteValue>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[onExit]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1764965177763</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1764965414473</Id>
+		<Name><![CDATA[waitForOutBid]]></Name>
+		<X>470</X>
+		<Y>290</Y>
+		<Label>
+			<X>-10</X>
+			<Y>-20</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>Hold</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>Hold</ClassName>
+				<ItemName>1412336242940</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[mode]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[self.CONDITIONAL]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[nEntitiesForSelfBlock]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[condition]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.houseBid.owner == agent && agent.houseBid.auctionEndtime <= time();]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[initiallyBlocked]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onEnter]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1764965414471</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1764965753831</Id>
+		<Name><![CDATA[outBidOrBuy]]></Name>
+		<X>540</X>
+		<Y>290</Y>
+		<Label>
+			<X>-30</X>
+			<Y>-40</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>SelectOutput</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>SelectOutput</ClassName>
+				<ItemName>1412336242931</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[conditionIsProbabilistic]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[false]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[condition]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.houseBid.auctionEndtime <= time() || !housesForSale.contains(agent.houseBid);]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[probability]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onAtEnter]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[choiceIsVolatile]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onEnter]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitTrue]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitFalse]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1764965753829</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1764965905886</Id>
+		<Name><![CDATA[outBid]]></Name>
+		<X>560</X>
+		<Y>360</Y>
+		<Label>
+			<X>5</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>Exit</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>Exit</ClassName>
+				<ItemName>1412336242934</ItemName>
+			</GenericParameterSubstituteReference>
+			<GenericParameterSubstituteValue Class="CodeValue">
+				<Code><![CDATA[Person]]></Code>
+			</GenericParameterSubstituteValue>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[onExit]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1764965905884</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1764965958311</Id>
+		<Name><![CDATA[payForHouse]]></Name>
+		<X>630</X>
+		<Y>280</Y>
+		<Label>
+			<X>-5</X>
+			<Y>-15</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>Delay</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>Delay</ClassName>
+				<ItemName>1412336242930</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[type]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[delayTime]]></Name>
+				<Value Class="CodeUnitValue">
+					<Code><![CDATA[triangular( 0.5, 1, 1.5 )]]></Code>
+					<Unit Class="TimeUnits">DAY</Unit>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[capacity]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[maximumCapacity]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[entityLocation]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[pushProtocol]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[forceStatisticsCollection]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onEnter]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.housesOwned.add(agent.houseBid);
+housesForSale.remove(agent.houseBid);
+agent.houseBid.HouseStatusSc.receiveMessage(ownerEntersHouse);
+agent.houseBid.auctionRunning = false;
+agent.houseBid = null;]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onAtExit]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExit]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onRemove]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1764965958309</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1764966303277</Id>
+		<Name><![CDATA[boughtHouse]]></Name>
+		<X>720</X>
+		<Y>290</Y>
+		<Label>
+			<X>-10</X>
+			<Y>-20</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>Exit</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>Exit</ClassName>
+				<ItemName>1412336242934</ItemName>
+			</GenericParameterSubstituteReference>
+			<GenericParameterSubstituteValue Class="CodeValue">
+				<Code><![CDATA[Person]]></Code>
+			</GenericParameterSubstituteValue>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[onExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.housingSC.receiveMessage(boughtHouse);]]></Code>
+				</Value>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1764966303275</Id>
 			<TableReference/>
 		</InitializationDatabaseTableQuery>
 		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>

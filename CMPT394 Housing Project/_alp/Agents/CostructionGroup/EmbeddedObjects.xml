@@ -85,16 +85,10 @@
 								<Name><![CDATA[BaseIncome]]></Name>
 							</Parameter>
 							<Parameter>
-								<Name><![CDATA[spendRate]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[rentCost]]></Name>
-							</Parameter>
-							<Parameter>
-								<Name><![CDATA[morgageCost]]></Name>
-							</Parameter>
-							<Parameter>
 								<Name><![CDATA[InterestRate]]></Name>
+							</Parameter>
+							<Parameter>
+								<Name><![CDATA[otherExpenditure]]></Name>
 							</Parameter>
 						</Parameters>
 						<ReplicationFlag>true</ReplicationFlag>
@@ -845,7 +839,7 @@
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[get_Main().market.add_housesForSale(agent.age, agent.sizeOfHouse, agent.lastPrice, agent.taxes);]]></Code>
+					<Code><![CDATA[get_Main().market.housesForSale.add(agent);]]></Code>
 				</Value>
 			</Parameter>
 		</Parameters>

@@ -64,7 +64,7 @@
 			<Id>1764800567379</Id>
 			<Expression>my_dataset</Expression>
 			<Color>-65536</Color>
-			<Expression2>0</Expression2>
+			<Expression2>market.housesForRent.size()+market.housesForSale.size()</Expression2>
 			<Expression2Flag>true</Expression2Flag>
 			<PointStyle>NONE</PointStyle>
 			<LineWidth>1.0</LineWidth>
