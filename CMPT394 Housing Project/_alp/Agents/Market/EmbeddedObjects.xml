@@ -305,6 +305,9 @@
 		<Parameters>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.inMarket = false;]]></Code>
+				</Value>
 			</Parameter>
 		</Parameters>
 		<ReplicationFlag>false</ReplicationFlag>
@@ -422,216 +425,6 @@
 		<QuantityColumn/>
 	</EmbeddedObject>
 	<EmbeddedObject>
-		<Id>1764962894140</Id>
-		<Name><![CDATA[seizeARent]]></Name>
-		<X>220</X>
-		<Y>180</Y>
-		<Label>
-			<X>-5</X>
-			<Y>-15</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<ActiveObjectClass>
-			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
-			<ClassName>Seize</ClassName>
-		</ActiveObjectClass>
-		<GenericParameterSubstitute>
-			<GenericParameterSubstituteReference>
-				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
-				<ClassName>Seize</ClassName>
-				<ItemName>1412336243147</ItemName>
-			</GenericParameterSubstituteReference>
-			<GenericParameterSubstituteValue Class="CodeValue">
-				<Code><![CDATA[Person]]></Code>
-			</GenericParameterSubstituteValue>
-		</GenericParameterSubstitute>
-		<Parameters>
-			<Parameter>
-				<Name><![CDATA[seizeFromOnePool]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[resourceSets]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[resourcePool]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[resourceQuantity]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[seizePolicy]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[capacity]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[maximumCapacity]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[sendResources]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[destinationType]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[destinationNode]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[destinationAttractor]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[destinationResource]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[destinationX]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[destinationY]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[destinationZ]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[attachResources]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[entityLocationQueue]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[priority]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[taskMayPreemptOtherTasks]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[taskPreemptionPolicy]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[terminatedTaskProcessing]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[terminatedTasksEnter]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[suspendResumeEntities]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[customizeResourceChoice]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[resourceChoiceCondition]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[resourceSelectionMode]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[resourceRating]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[resourceComparison]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[taskStartBlocksAreConnected]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[taskStartBlocks]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[enableTimeout]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[timeout]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[enablePreemption]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[canceledUnitsBehavior]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[canceledUnitsRelease]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[pushProtocol]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[forceStatisticsCollection]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onEnter]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onExitTimeout]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onExitPreempted]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onSeizeUnit]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onPrepareUnit]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onExit]]></Name>
-				<Value Class="CodeValue">
-					<Code><![CDATA[for (House rent : housesForRent){
-	if (agent.budget >= rent.rentPrice){
-		get_Main().market.housesForRent.remove(rent);
-		agent.houseRent = rent;
-		agent.housingSC.receiveMessage(rentHouse);
-	}
-}]]></Code>
-				</Value>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onRemove]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onTaskTerminated]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[comparison]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onTaskSuspended]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onTaskResumed]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[onUnitFinishedWrapUp]]></Name>
-			</Parameter>
-		</Parameters>
-		<ReplicationFlag>false</ReplicationFlag>
-		<Replication Class="CodeValue">
-			<Code><![CDATA[100]]></Code>
-		</Replication>
-		<CollectionType>ARRAY_LIST_BASED</CollectionType>
-		<InitialLocationType>XYZ</InitialLocationType>
-		<ColumnCode Class="CodeValue">
-			<Code><![CDATA[0]]></Code>
-		</ColumnCode>
-		<RowCode Class="CodeValue">
-			<Code><![CDATA[0]]></Code>
-		</RowCode>
-		<LocationNameCode Class="CodeValue">
-			<Code><![CDATA[""]]></Code>
-		</LocationNameCode>
-		<InitializationType>SPECIFIED_NUMBER</InitializationType>
-		<InitializationDatabaseTableQuery>
-			<Id>1764962894138</Id>
-			<TableReference/>
-		</InitializationDatabaseTableQuery>
-		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-		<QuantityColumn/>
-	</EmbeddedObject>
-	<EmbeddedObject>
 		<Id>1764963007606</Id>
 		<Name><![CDATA[rentedHouse]]></Name>
 		<X>500</X>
@@ -662,7 +455,8 @@
 				<Name><![CDATA[onExit]]></Name>
 				<Value Class="CodeValue">
 					<Code><![CDATA[agent.housingSC.receiveMessage(rentHouse);
-agent.houseRent.HouseStatusSc.receiveMessage(houseIsRented);]]></Code>
+agent.houseRent.HouseStatusSc.receiveMessage(houseIsRented);
+agent.inMarket = false;]]></Code>
 				</Value>
 			</Parameter>
 		</Parameters>
@@ -715,6 +509,9 @@ agent.houseRent.HouseStatusSc.receiveMessage(houseIsRented);]]></Code>
 		<Parameters>
 			<Parameter>
 				<Name><![CDATA[capacity]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[10000]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[maximumCapacity]]></Name>
@@ -757,8 +554,10 @@ agent.houseRent.HouseStatusSc.receiveMessage(houseIsRented);]]></Code>
 		h.salePrice = agent.budget;
 		h.auctionRunning = true;
 		h.auctionEndtime = time() + auctionDeadline;
-		h.owner = agent;
+		h.topBidder = agent;
 		agent.houseBid = h;
+		bidders.add(agent);
+		break;
 	}
 }]]></Code>
 				</Value>
@@ -768,6 +567,14 @@ agent.houseRent.HouseStatusSc.receiveMessage(houseIsRented);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[topBidders.clear();
+for (House h : housesForSale){
+	if (h.topBidder != null){
+		topBidders.add(h.topBidder);
+	}
+}]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExitTimeout]]></Name>
@@ -804,7 +611,7 @@ agent.houseRent.HouseStatusSc.receiveMessage(houseIsRented);]]></Code>
 	</EmbeddedObject>
 	<EmbeddedObject>
 		<Id>1764964538096</Id>
-		<Name><![CDATA[winningBid]]></Name>
+		<Name><![CDATA[bid]]></Name>
 		<X>370</X>
 		<Y>290</Y>
 		<Label>
@@ -835,7 +642,7 @@ agent.houseRent.HouseStatusSc.receiveMessage(houseIsRented);]]></Code>
 			<Parameter>
 				<Name><![CDATA[condition]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[topBidders.contains(agent)]]></Code>
+					<Code><![CDATA[bidders.contains(agent) && agent.houseBid != null;]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -849,14 +656,6 @@ agent.houseRent.HouseStatusSc.receiveMessage(houseIsRented);]]></Code>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
-				<Value Class="CodeValue">
-					<Code><![CDATA[topBidders.clear();
-for (House h : housesForSale){
-	if (h.owner != null){
-		topBidders.add(h.owner);
-	}
-}]]></Code>
-				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExitTrue]]></Name>
@@ -917,6 +716,9 @@ for (House h : housesForSale){
 		<Parameters>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.inMarket = false;]]></Code>
+				</Value>
 			</Parameter>
 		</Parameters>
 		<ReplicationFlag>false</ReplicationFlag>
@@ -978,7 +780,7 @@ for (House h : housesForSale){
 			<Parameter>
 				<Name><![CDATA[condition]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[agent.houseBid.owner == agent && agent.houseBid.auctionEndtime <= time();]]></Code>
+					<Code><![CDATA[agent.houseBid.topBidder == agent && agent.houseBid.auctionEndtime <= time();]]></Code>
 				</Value>
 			</Parameter>
 			<Parameter>
@@ -1014,7 +816,10 @@ for (House h : housesForSale){
 	<EmbeddedObject>
 		<Id>1764965753831</Id>
 		<Name><![CDATA[outBidOrBuy]]></Name>
-		<X>540</X>
+		<Description><![CDATA[agent.houseBid.auctionEndtime <= time() || !housesForSale.contains(agent.houseBid);
+
+agent.houseBid != null && agent.houseBid.topBidder == agent;]]></Description>
+		<X>590</X>
 		<Y>290</Y>
 		<Label>
 			<X>-30</X>
@@ -1092,7 +897,7 @@ for (House h : housesForSale){
 	<EmbeddedObject>
 		<Id>1764965905886</Id>
 		<Name><![CDATA[outBid]]></Name>
-		<X>560</X>
+		<X>610</X>
 		<Y>360</Y>
 		<Label>
 			<X>5</X>
@@ -1118,6 +923,10 @@ for (House h : housesForSale){
 		<Parameters>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.inMarket = false;
+bidders.remove(agent);]]></Code>
+				</Value>
 			</Parameter>
 		</Parameters>
 		<ReplicationFlag>false</ReplicationFlag>
@@ -1146,7 +955,7 @@ for (House h : housesForSale){
 	<EmbeddedObject>
 		<Id>1764965958311</Id>
 		<Name><![CDATA[payForHouse]]></Name>
-		<X>630</X>
+		<X>680</X>
 		<Y>280</Y>
 		<Label>
 			<X>-5</X>
@@ -1197,19 +1006,18 @@ for (House h : housesForSale){
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onEnter]]></Name>
-				<Value Class="CodeValue">
-					<Code><![CDATA[agent.housesOwned.add(agent.houseBid);
-housesForSale.remove(agent.houseBid);
-agent.houseBid.HouseStatusSc.receiveMessage(ownerEntersHouse);
-agent.houseBid.auctionRunning = false;
-agent.houseBid = null;]]></Code>
-				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onAtExit]]></Name>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[agent.housesOwned.add(agent.houseBid);
+agent.houseBid.HouseStatusSc.receiveMessage(ownerEntersHouse);
+agent.houseBid.auctionRunning = false;
+agent.houseBid = null;]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[onRemove]]></Name>
@@ -1241,7 +1049,7 @@ agent.houseBid = null;]]></Code>
 	<EmbeddedObject>
 		<Id>1764966303277</Id>
 		<Name><![CDATA[boughtHouse]]></Name>
-		<X>720</X>
+		<X>770</X>
 		<Y>290</Y>
 		<Label>
 			<X>-10</X>
@@ -1268,7 +1076,8 @@ agent.houseBid = null;]]></Code>
 			<Parameter>
 				<Name><![CDATA[onExit]]></Name>
 				<Value Class="CodeValue">
-					<Code><![CDATA[agent.housingSC.receiveMessage(boughtHouse);]]></Code>
+					<Code><![CDATA[agent.housingSC.receiveMessage(boughtHouse);
+agent.inMarket = false;]]></Code>
 				</Value>
 			</Parameter>
 		</Parameters>
@@ -1290,6 +1099,117 @@ agent.houseBid = null;]]></Code>
 		<InitializationType>SPECIFIED_NUMBER</InitializationType>
 		<InitializationDatabaseTableQuery>
 			<Id>1764966303275</Id>
+			<TableReference/>
+		</InitializationDatabaseTableQuery>
+		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+		<QuantityColumn/>
+	</EmbeddedObject>
+	<EmbeddedObject>
+		<Id>1764976628448</Id>
+		<Name><![CDATA[queue]]></Name>
+		<X>220</X>
+		<Y>180</Y>
+		<Label>
+			<X>-5</X>
+			<Y>-15</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<ActiveObjectClass>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>Queue</ClassName>
+		</ActiveObjectClass>
+		<GenericParameterSubstitute>
+			<GenericParameterSubstituteReference>
+				<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+				<ClassName>Queue</ClassName>
+				<ItemName>1412336242932</ItemName>
+			</GenericParameterSubstituteReference>
+		</GenericParameterSubstitute>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[capacity]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[10000]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[maximumCapacity]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[entityLocation]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[queuing]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[priority]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[comparison]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[enableTimeout]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[timeout]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[enablePreemption]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[forceStatisticsCollection]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onEnter]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onAtExit]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExit]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[for (House rent : housesForRent){
+	if (agent.budget >= rent.rentPrice){
+		get_Main().market.housesForRent.remove(rent);
+		agent.houseRent = rent;
+		agent.housingSC.receiveMessage(rentHouse);
+	}
+}]]></Code>
+				</Value>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitTimeout]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onExitPreempted]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[onRemove]]></Name>
+			</Parameter>
+		</Parameters>
+		<ReplicationFlag>false</ReplicationFlag>
+		<Replication Class="CodeValue">
+			<Code><![CDATA[100]]></Code>
+		</Replication>
+		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<InitialLocationType>XYZ</InitialLocationType>
+		<ColumnCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</ColumnCode>
+		<RowCode Class="CodeValue">
+			<Code><![CDATA[0]]></Code>
+		</RowCode>
+		<LocationNameCode Class="CodeValue">
+			<Code><![CDATA[""]]></Code>
+		</LocationNameCode>
+		<InitializationType>SPECIFIED_NUMBER</InitializationType>
+		<InitializationDatabaseTableQuery>
+			<Id>1764976628446</Id>
 			<TableReference/>
 		</InitializationDatabaseTableQuery>
 		<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>

@@ -18,7 +18,7 @@
               StaticVariable="false">
 			<Type><![CDATA[double]]></Type>
 			<InitialValue Class="CodeValue">
-				<Code><![CDATA[uniform(0,10000)
+				<Code><![CDATA[100000
 ]]></Code>
 			</InitialValue>
 		</Properties>
@@ -214,7 +214,7 @@
 	</Variable>
 	<Variable Class="PlainVariable">
 		<Id>1764961781319</Id>
-		<Name><![CDATA[wantsToBuy]]></Name>
+		<Name><![CDATA[inMarket]]></Name>
 		<X>20</X>
 		<Y>210</Y>
 		<Label>

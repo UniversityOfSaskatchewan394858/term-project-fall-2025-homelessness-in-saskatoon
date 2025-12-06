@@ -84,6 +84,9 @@
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[totalBudgetOfGroup]]></Name>
+				<Value Class="CodeValue">
+					<Code><![CDATA[1000000]]></Code>
+				</Value>
 			</Parameter>
 			<Parameter>
 				<Name><![CDATA[pricePerSqft]]></Name>

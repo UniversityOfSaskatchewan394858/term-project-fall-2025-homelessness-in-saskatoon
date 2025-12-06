@@ -2,6 +2,7 @@
 <ActiveObjectClass>
 	<Id>1762284094046</Id>
 	<Name><![CDATA[CostructionGroup]]></Name>
+	<Import><![CDATA[import org.w3c.dom.ranges.Range;]]></Import>
 	<Generic>false</Generic>
 	<GenericParameter>
 		<Id>1762284094051</Id>

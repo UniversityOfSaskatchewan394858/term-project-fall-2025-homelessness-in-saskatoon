@@ -132,8 +132,8 @@
 	<Connector>
 		<Id>1764962929909</Id>
 		<Name><![CDATA[connector1]]></Name>
-		<X>230</X>
-		<Y>210</Y>
+		<X>220</X>
+		<Y>200</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -144,12 +144,12 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>project_construction_part</PackageName>
 			<ClassName>Market</ClassName>
-			<ItemName>seizeARent</ItemName>
+			<ItemName>queue</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
-			<ClassName>Seize</ClassName>
-			<ItemName>preparedUnits</ItemName>
+			<ClassName>Queue</ClassName>
+			<ItemName>in</ItemName>
 		</SourceConnectableItemReference>
 		<TargetEmbeddedObjectReference>
 			<PackageName>project_construction_part</PackageName>
@@ -167,8 +167,8 @@
 				<Y>0</Y>
 			</Point>
 			<Point>
-				<X>-40</X>
-				<Y>40</Y>
+				<X>-30</X>
+				<Y>50</Y>
 			</Point>
 		</Points>
 	</Connector>
@@ -197,11 +197,11 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>project_construction_part</PackageName>
 			<ClassName>Market</ClassName>
-			<ItemName>seizeARent</ItemName>
+			<ItemName>queue</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
-			<ClassName>Seize</ClassName>
+			<ClassName>Queue</ClassName>
 			<ItemName>out</ItemName>
 		</TargetConnectableItemReference>
 		<Points>
@@ -316,7 +316,7 @@
 		<SourceEmbeddedObjectReference>
 			<PackageName>project_construction_part</PackageName>
 			<ClassName>Market</ClassName>
-			<ItemName>winningBid</ItemName>
+			<ItemName>bid</ItemName>
 		</SourceEmbeddedObjectReference>
 		<SourceConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -369,7 +369,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>project_construction_part</PackageName>
 			<ClassName>Market</ClassName>
-			<ItemName>winningBid</ItemName>
+			<ItemName>bid</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -412,7 +412,7 @@
 		<TargetEmbeddedObjectReference>
 			<PackageName>project_construction_part</PackageName>
 			<ClassName>Market</ClassName>
-			<ItemName>winningBid</ItemName>
+			<ItemName>bid</ItemName>
 		</TargetEmbeddedObjectReference>
 		<TargetConnectableItemReference>
 			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
@@ -431,52 +431,9 @@
 		</Points>
 	</Connector>
 	<Connector>
-		<Id>1764965755939</Id>
-		<Name><![CDATA[connector10]]></Name>
-		<X>550</X>
-		<Y>300</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>false</ShowLabel>
-		<SourceEmbeddedObjectReference>
-			<PackageName>project_construction_part</PackageName>
-			<ClassName>Market</ClassName>
-			<ItemName>outBidOrBuy</ItemName>
-		</SourceEmbeddedObjectReference>
-		<SourceConnectableItemReference>
-			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
-			<ClassName>SelectOutput</ClassName>
-			<ItemName>in</ItemName>
-		</SourceConnectableItemReference>
-		<TargetEmbeddedObjectReference>
-			<PackageName>project_construction_part</PackageName>
-			<ClassName>Market</ClassName>
-			<ItemName>waitForOutBid</ItemName>
-		</TargetEmbeddedObjectReference>
-		<TargetConnectableItemReference>
-			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
-			<ClassName>Hold</ClassName>
-			<ItemName>out</ItemName>
-		</TargetConnectableItemReference>
-		<Points>
-			<Point>
-				<X>0</X>
-				<Y>0</Y>
-			</Point>
-			<Point>
-				<X>-60</X>
-				<Y>0</Y>
-			</Point>
-		</Points>
-	</Connector>
-	<Connector>
 		<Id>1764965908367</Id>
 		<Name><![CDATA[connector11]]></Name>
-		<X>560</X>
+		<X>610</X>
 		<Y>370</Y>
 		<Label>
 			<X>10</X>
@@ -519,7 +476,7 @@
 	<Connector>
 		<Id>1764965959283</Id>
 		<Name><![CDATA[connector12]]></Name>
-		<X>630</X>
+		<X>680</X>
 		<Y>300</Y>
 		<Label>
 			<X>10</X>
@@ -562,7 +519,7 @@
 	<Connector>
 		<Id>1764966307877</Id>
 		<Name><![CDATA[connector13]]></Name>
-		<X>0</X>
+		<X>50</X>
 		<Y>0</Y>
 		<Label>
 			<X>10</X>
@@ -599,6 +556,49 @@
 			<Point>
 				<X>670</X>
 				<Y>300</Y>
+			</Point>
+		</Points>
+	</Connector>
+	<Connector>
+		<Id>1764983570629</Id>
+		<Name><![CDATA[connector14]]></Name>
+		<X>600</X>
+		<Y>300</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<SourceEmbeddedObjectReference>
+			<PackageName>project_construction_part</PackageName>
+			<ClassName>Market</ClassName>
+			<ItemName>outBidOrBuy</ItemName>
+		</SourceEmbeddedObjectReference>
+		<SourceConnectableItemReference>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>SelectOutput</ClassName>
+			<ItemName>in</ItemName>
+		</SourceConnectableItemReference>
+		<TargetEmbeddedObjectReference>
+			<PackageName>project_construction_part</PackageName>
+			<ClassName>Market</ClassName>
+			<ItemName>waitForOutBid</ItemName>
+		</TargetEmbeddedObjectReference>
+		<TargetConnectableItemReference>
+			<PackageName>com.anylogic.libraries.processmodeling</PackageName>
+			<ClassName>Hold</ClassName>
+			<ItemName>out</ItemName>
+		</TargetConnectableItemReference>
+		<Points>
+			<Point>
+				<X>0</X>
+				<Y>0</Y>
+			</Point>
+			<Point>
+				<X>-110</X>
+				<Y>0</Y>
 			</Point>
 		</Points>
 	</Connector>
